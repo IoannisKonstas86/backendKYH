@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="getDataFromStrapi();">Fetch Products</button>
+    </div>
+
+    <div id="productsFetched"></div>
+
+    <div>
+        <label for="user">Username:</label>
+        <input type="text" name="user" id="user" onchange="userValidate(this);">
+        <div id="userError" class="errorInfo"></div>
+
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass" onchange="passValidate(this);">
+        <div id="passwordError" class="errorInfo"></div>
+    </div>
+
+    <div>
+        <label for="Title">Title:</label>
+        <input type="text" name="title" id="title">
+        <div id="laptopError" class="errorInfo"></div>
+    </div>
+    <div>
+        <label for="Description">Description:</label>
+        <input type="text" name="description" id="description">
+    </div>
+    <div>
+        <label for="Price">Price:</label>
+        <input type="number" name="price" id="price">
+    </div>
+    <div>
+        <label for="Qty">Qty:</label>
+        <input type="number" name="qty" id="qty">
+    </div>
+    <label for="Category">Add to:</label>
+    <select name="category" id="category">
+        <option value="Laptops">Laptops</option>
+        <option value="Monitors">Monitors</option>
+        <option value="Keyboards">Keyboards</option>
+    </select>
+    <div>
+        <button onclick="getToken();">Skicka iväg ny data</button>
+    </div>
+
+</body>
+</html>
