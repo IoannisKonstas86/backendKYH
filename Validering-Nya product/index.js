@@ -239,7 +239,7 @@ function generateRow(obj, objId, header) {
     //Skapa update och Delete knapp för TD rad
     if (!header) {
         //URL för den specifika posten
-        let postURL = `http://localhost:1337/api/Laptops/${objId}`;
+        let postURL = `http://localhost:1337/api/products[i]/${objId}`;
 
         output += `<td><button onclick="updatePost('${postURL}');">Update Post</button></td>`;
         output += `<td><button onclick="deletePost('${postURL}');">Delete Post</button></td>`;
